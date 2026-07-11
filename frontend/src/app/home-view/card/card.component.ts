@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { Gif } from '../../model/gif';
@@ -8,6 +8,7 @@ import { ContextService } from '../../services/context-service/context.service';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [MatCardModule, MatIconModule],
 })
 export class CardComponent {

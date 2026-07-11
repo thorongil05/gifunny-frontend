@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Gif } from '../../model/gif';
 import { GifService } from '../../services/gif-service/gif.service';
@@ -10,6 +10,7 @@ import { CardComponent } from '../card/card.component';
   selector: 'app-home',
   templateUrl: './home.component.html',
   imports: [SearchComponent, GridComponent, CardComponent],
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {

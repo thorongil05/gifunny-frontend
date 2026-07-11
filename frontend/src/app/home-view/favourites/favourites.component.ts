@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Gif } from '../../model/gif';
 import { ContextService } from '../../services/context-service/context.service';
 import { GridComponent } from '../grid/grid.component';
@@ -7,6 +7,7 @@ import { GridComponent } from '../grid/grid.component';
   selector: 'app-favourites',
   templateUrl: './favourites.component.html',
   styleUrl: './favourites.component.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [GridComponent],
 })
 export class FavouritesComponent {

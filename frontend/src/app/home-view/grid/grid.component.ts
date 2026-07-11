@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Gif } from '../../model/gif';
 import { MatGridListModule } from '@angular/material/grid-list';
 
@@ -6,6 +6,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
   selector: 'app-grid',
   templateUrl: './grid.component.html',
   styleUrl: './grid.component.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [MatGridListModule],
 })
 export class GridComponent {
